@@ -1,0 +1,32 @@
+<div class="container">
+    <p class="lead"></p>
+     </div>
+
+     <form>
+      <div class="form-row">
+        <div id="mysearch" class="col-lg-3">
+          <input #text type="text" class="form-control" placeholder="Enter track name">
+        </div>
+          <button type="button" class="btn btn-primary" (click)="click(text.value)">Search</button>
+        </div>
+        
+      </form>
+
+<div class="container-fluid">
+  <div class="container-fluid d-flex flex-wrap my-2">
+
+  <div class="card" style="width: 18rem;" *ngFor="let music of musicArray">
+      <div class="card-body">
+          <!-- <h5 img class="card-img-top" src="" alt="Card image cap">Music Image : {{music.image}}</h5> -->
+
+        <h5 class="card-title">Song Name: {{music.name}}</h5>
+        <h6 class="card-subtitle mb-2">Artist Name: {{music.artist.name}}</h6>
+        
+     
+        <button (click)="addFavourite(music)" >ADD TO WISHLIST</button>
+    
+        <button (click)= "getDetails(music)">DETAILS</button>
+      </div>
+  </div>
+  </div>
+</div>

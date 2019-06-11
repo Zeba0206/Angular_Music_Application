@@ -1,0 +1,17 @@
+<div class="container-fluid">
+
+  <div class="container-fluid d-flex flex-wrap my-2">
+  <div class="card" style="width: 18rem;" *ngFor="let music of track">
+      <div class="card-body">
+
+        <h5 class="card-title">Song Id: {{music.trackId}}</h5>
+        <h6 class="card-subtitle mb-2">Artist Name: {{music.trackName}}</h6>
+        <h6 class="card-subtitle mb-2">Artist Comments: {{music.trackComments}}</h6>
+        
+     
+        <button (click)=removeFavourite(music.trackId)>Remove WishList</button>
+    
+      </div>
+  </div>
+  </div>
+</div>
